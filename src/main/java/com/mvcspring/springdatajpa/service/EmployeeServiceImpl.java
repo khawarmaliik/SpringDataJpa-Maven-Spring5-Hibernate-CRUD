@@ -5,32 +5,31 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.mvcspring.springdatajpa.dao.EmployeeDaoImpl;
 import com.mvcspring.springdatajpa.model.Employee;
-import com.mvcspring.springdatajpa.repository.EmployeeRepository;
-
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-	EmployeeRepository employeeRepository;
+	EmployeeDaoImpl employeeDaoImpl;
 	
-	public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
-		this.employeeRepository = employeeRepository;
+	public EmployeeServiceImpl(EmployeeDaoImpl employeeDaoImpl) {
+		this.employeeDaoImpl = employeeDaoImpl;
 	}
 	
 	public Employee saveCustomer(Employee employee) {
-		return employeeRepository.saveAndFlush(employee);
+		return employeeDaoImpl.saveCustomer(employee);
 	}
 
 	public List<Employee> getEmployee() {
-		return employeeRepository.findAll();
+		return employeeDaoImpl.getEmployee();
 	}
 
 	public Optional<Employee> getEmployeeById(int id){
-		return employeeRepository.findById(id);
+		return employeeDaoImpl.getEmployeeById(id);
 	}
 
 	public void deleteCustomer(int id) {
-		employeeRepository.deleteById(id);
+		employeeDaoImpl.deleteCustomer(id);;
 	}
 
 }

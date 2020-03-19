@@ -26,6 +26,12 @@
 						method="post" modelAttribute="employee">
 						
 						<div class="form-group">
+							<div class="col-md-9">
+								<form:hidden path="empId" cssClass="form-control" />
+							</div>
+						</div>
+						
+						<div class="form-group">
 							<label for="empName" class="col-md-3 control-label">
 								Name</label>
 							<div class="col-md-9">

@@ -1,9 +1,10 @@
 com\mvcspring\springdatajpa\config\PersistenceJPAConfig.class
 com\mvcspring\springdatajpa\service\EmployeeServiceImpl.class
 com\mvcspring\springdatajpa\config\WebMvcConfig.class
-com\mvcspring\springdatajpa\exception\ResourceNotFoundException.class
 com\mvcspring\springdatajpa\repository\EmployeeRepository.class
+com\mvcspring\springdatajpa\dao\EmployeeDaoImpl.class
 com\mvcspring\springdatajpa\service\EmployeeService.class
+com\mvcspring\springdatajpa\dao\EmployeeDao.class
 com\mvcspring\springdatajpa\model\Employee.class
 com\mvcspring\springdatajpa\config\AppInitializer.class
 com\mvcspring\springdatajpa\controller\EmployeeController.class
